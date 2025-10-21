@@ -1,4 +1,4 @@
-# data_fetcher.py
+
 import requests
 import time
 import logging

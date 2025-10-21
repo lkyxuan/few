@@ -1,4 +1,3 @@
-# database.py - 确认并使用毫秒级时间戳
 
 import logging
 import time

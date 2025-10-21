@@ -1,0 +1,1102 @@
+2025-05-30 04:10:03 - 守护进程启动
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   161  100    77  100    84    216    235 --:--:-- --:--:-- --:--:--   450100   161  100    77  100    84    215    235 --:--:-- --:--:-- --:--:--   450
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:10:03 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    179    224 --:--:-- --:--:-- --:--:--   405
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:10:09 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    210    221 --:--:-- --:--:-- --:--:--   431100   158  100    77  100    81    210    221 --:--:-- --:--:-- --:--:--   430
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:10:39 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   473
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:10:45 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    189    198 --:--:-- --:--:-- --:--:--   387100   158  100    77  100    81    189    198 --:--:-- --:--:-- --:--:--   387
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:11:15 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    151    189 --:--:-- --:--:-- --:--:--   341
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:11:21 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    194    204 --:--:-- --:--:-- --:--:--   398100   158  100    77  100    81    194    204 --:--:-- --:--:-- --:--:--   398
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:11:51 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    249    311 --:--:-- --:--:-- --:--:--   561
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:11:56 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    153    161 --:--:-- --:--:-- --:--:--   316100   158  100    77  100    81    153    161 --:--:-- --:--:-- --:--:--   315
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:12:27 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    208    259 --:--:-- --:--:-- --:--:--   468
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:12:32 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    183    193 --:--:-- --:--:-- --:--:--   377
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:13:03 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    236    295 --:--:-- --:--:-- --:--:--   530
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:13:08 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    152    160 --:--:-- --:--:-- --:--:--   312
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:13:39 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    151    189 --:--:-- --:--:-- --:--:--   340
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:13:44 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    162    171 --:--:-- --:--:-- --:--:--   334
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:14:15 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    251    313 --:--:-- --:--:-- --:--:--   567
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:14:20 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    167    176 --:--:-- --:--:-- --:--:--   344
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:14:51 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    204    254 --:--:-- --:--:-- --:--:--   458100   173  100    77  100    96    204    254 --:--:-- --:--:-- --:--:--   457
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:14:56 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    182    191 --:--:-- --:--:-- --:--:--   374
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:15:27 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    187    233 --:--:-- --:--:-- --:--:--   419100   173  100    77  100    96    186    233 --:--:-- --:--:-- --:--:--   419
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:15:32 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    198    208 --:--:-- --:--:-- --:--:--   407
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:16:03 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    216    269 --:--:-- --:--:-- --:--:--   485100   173  100    77  100    96    215    268 --:--:-- --:--:-- --:--:--   483
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:16:08 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    203    214 --:--:-- --:--:-- --:--:--   419
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:16:39 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    222    277 --:--:-- --:--:-- --:--:--   501
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:16:44 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    155    163 --:--:-- --:--:-- --:--:--   319
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:17:45 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    209    261 --:--:-- --:--:-- --:--:--   471
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:17:50 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    196    207 --:--:-- --:--:-- --:--:--   404
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:18:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    197    246 --:--:-- --:--:-- --:--:--   444
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:18:56 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    173    182 --:--:-- --:--:-- --:--:--   357
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:19:26 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    198    247 --:--:-- --:--:-- --:--:--   447
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:19:32 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   425100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   425
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:20:02 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    183    228 --:--:-- --:--:-- --:--:--   411
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:20:08 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    172    181 --:--:-- --:--:-- --:--:--   353100   158  100    77  100    81    172    181 --:--:-- --:--:-- --:--:--   353
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:20:38 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    205    255 --:--:-- --:--:-- --:--:--   462
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:20:44 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    217    229 --:--:-- --:--:-- --:--:--   446100   158  100    77  100    81    217    228 --:--:-- --:--:-- --:--:--   445
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}invalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+./daemon.sh: line 19: free: command not found
+uptime: illegal option -- p
+usage: uptime
+2025-05-30 04:21:14 - 系统状态报告:
+- CPU使用率: %
+- 内存使用率: 
+- 磁盘使用率: 3%
+- 采集进程数:        1
+- 运行时长: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   230  100    43  100   187    153    667 --:--:-- --:--:-- --:--:--   821
+{"code":9499,"msg":"Bad Request","data":{}}2025-05-30 04:22:15 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    202    252 --:--:-- --:--:-- --:--:--   454100   173  100    77  100    96    201    251 --:--:-- --:--:-- --:--:--   452
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:22:20 - 程序重启成功
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    242    254 --:--:-- --:--:-- --:--:--   498
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:22:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    211    263 --:--:-- --:--:-- --:--:--   475
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:22:56 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    204    215 --:--:-- --:--:-- --:--:--   420100   158  100    77  100    81    204    215 --:--:-- --:--:-- --:--:--   419
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:23:26 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    226    282 --:--:-- --:--:-- --:--:--   510
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:23:32 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    210    221 --:--:-- --:--:-- --:--:--   430100   158  100    77  100    81    210    221 --:--:-- --:--:-- --:--:--   430
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:24:02 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    204    254 --:--:-- --:--:-- --:--:--   460
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:24:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    158    166 --:--:-- --:--:-- --:--:--   324100   158  100    77  100    81    158    166 --:--:-- --:--:-- --:--:--   324
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:24:38 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    226    282 --:--:-- --:--:-- --:--:--   510
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:24:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    157    165 --:--:-- --:--:-- --:--:--   322100   158  100    77  100    81    157    165 --:--:-- --:--:-- --:--:--   321
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:25:14 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    141    176 --:--:-- --:--:-- --:--:--   317
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:25:20 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   317100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   317
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:25:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    267    334 --:--:-- --:--:-- --:--:--   602
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:25:56 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    172    181 --:--:-- --:--:-- --:--:--   353100   158  100    77  100    81    172    181 --:--:-- --:--:-- --:--:--   353
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:26:26 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    219    273 --:--:-- --:--:-- --:--:--   494
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:26:31 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    265    279 --:--:-- --:--:-- --:--:--   544
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:27:02 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    160    200 --:--:-- --:--:-- --:--:--   361100   173  100    77  100    96    160    200 --:--:-- --:--:-- --:--:--   360
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:27:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    170    179 --:--:-- --:--:-- --:--:--   350
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:27:38 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    192    240 --:--:-- --:--:-- --:--:--   432
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:27:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    168    177 --:--:-- --:--:-- --:--:--   346
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:28:14 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    96    0     0  100    96      0   1183 --:--:-- --:--:-- --:--:--  1170100   173  100    77  100    96    191    238 --:--:-- --:--:-- --:--:--   429
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:28:19 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    211    222 --:--:-- --:--:-- --:--:--   434
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:28:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    155    193 --:--:-- --:--:-- --:--:--   348100   173  100    77  100    96    155    193 --:--:-- --:--:-- --:--:--   348
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:28:55 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    202    213 --:--:-- --:--:-- --:--:--   416
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:29:26 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    198    247 --:--:-- --:--:-- --:--:--   445100   173  100    77  100    96    198    247 --:--:-- --:--:-- --:--:--   444
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:29:31 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    232    244 --:--:-- --:--:-- --:--:--   477
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:30:02 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    207    258 --:--:-- --:--:-- --:--:--   466
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:30:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    194    204 --:--:-- --:--:-- --:--:--   400
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:30:37 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    125    156 --:--:-- --:--:-- --:--:--   282100   173  100    77  100    96    125    156 --:--:-- --:--:-- --:--:--   282
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:30:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    209    219 --:--:-- --:--:-- --:--:--   429
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:31:14 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    165    206 --:--:-- --:--:-- --:--:--   372100   173  100    77  100    96    165    206 --:--:-- --:--:-- --:--:--   371
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:31:19 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    206    217 --:--:-- --:--:-- --:--:--   424
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:31:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    206    257 --:--:-- --:--:-- --:--:--   463100   173  100    77  100    96    206    257 --:--:-- --:--:-- --:--:--   462
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:31:55 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    171    180 --:--:-- --:--:-- --:--:--   351
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:32:25 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    261    325 --:--:-- --:--:-- --:--:--   588
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:32:31 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    148    155 --:--:-- --:--:-- --:--:--   303
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:33:01 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    197    246 --:--:-- --:--:-- --:--:--   444
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:33:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    131    137 --:--:-- --:--:-- --:--:--   268
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}invalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+./daemon.sh: line 19: free: command not found
+uptime: illegal option -- p
+usage: uptime
+2025-05-30 04:33:08 - 系统状态报告:
+- CPU使用率: %
+- 内存使用率: 
+- 磁盘使用率: 3%
+- 采集进程数:        0
+- 运行时长: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   230  100    43  100   187    167    726 --:--:-- --:--:-- --:--:--   894
+{"code":9499,"msg":"Bad Request","data":{}}2025-05-30 04:33:38 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    147    183 --:--:-- --:--:-- --:--:--   330
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:33:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    165    174 --:--:-- --:--:-- --:--:--   339100   158  100    77  100    81    165    174 --:--:-- --:--:-- --:--:--   339
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:34:14 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    204    255 --:--:-- --:--:-- --:--:--   461
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:34:19 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    192    202 --:--:-- --:--:-- --:--:--   395
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:34:50 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    220    274 --:--:-- --:--:-- --:--:--   494
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:34:55 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    217    228 --:--:-- --:--:-- --:--:--   446
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:35:26 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    213    266 --:--:-- --:--:-- --:--:--   479100   173  100    77  100    96    213    266 --:--:-- --:--:-- --:--:--   479
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:35:31 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    152    160 --:--:-- --:--:-- --:--:--   312
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:36:02 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    219    273 --:--:-- --:--:-- --:--:--   492100   173  100    77  100    96    218    272 --:--:-- --:--:-- --:--:--   490
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:36:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    191    201 --:--:-- --:--:-- --:--:--   393
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:36:38 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    181    225 --:--:-- --:--:-- --:--:--   406100   173  100    77  100    96    180    224 --:--:-- --:--:-- --:--:--   404
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:36:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    199    209 --:--:-- --:--:-- --:--:--   409
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:37:14 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    229    285 --:--:-- --:--:-- --:--:--   513100   173  100    77  100    96    228    285 --:--:-- --:--:-- --:--:--   513
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:37:19 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    173    182 --:--:-- --:--:-- --:--:--   355
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:37:49 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    207    258 --:--:-- --:--:-- --:--:--   466
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:37:55 - 程序重启成功
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    211    222 --:--:-- --:--:-- --:--:--   434
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:38:25 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    202    252 --:--:-- --:--:-- --:--:--   456
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:38:31 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    81    0     0  100    81      0    601 --:--:-- --:--:-- --:--:--   600100   158  100    77  100    81    210    221 --:--:-- --:--:-- --:--:--   431
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:39:01 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    165    206 --:--:-- --:--:-- --:--:--   372
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:39:07 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    206    216 --:--:-- --:--:-- --:--:--   422100   158  100    77  100    81    206    216 --:--:-- --:--:-- --:--:--   422
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:39:37 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    194    241 --:--:-- --:--:-- --:--:--   436
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:39:43 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    175    184 --:--:-- --:--:-- --:--:--   359100   158  100    77  100    81    175    184 --:--:-- --:--:-- --:--:--   359
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:40:13 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   473
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:40:19 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    207    217 --:--:-- --:--:-- --:--:--   424100   158  100    77  100    81    206    217 --:--:-- --:--:-- --:--:--   423
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:40:49 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    215    268 --:--:-- --:--:-- --:--:--   484
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:40:54 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   316100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   316
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:41:25 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    194    242 --:--:-- --:--:-- --:--:--   437
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:41:30 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    229    241 --:--:-- --:--:-- --:--:--   473
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:42:01 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    195    243 --:--:-- --:--:-- --:--:--   437100   173  100    77  100    96    194    242 --:--:-- --:--:-- --:--:--   436
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:42:06 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   316
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:42:37 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    152    189 --:--:-- --:--:-- --:--:--   341100   173  100    77  100    96    152    189 --:--:-- --:--:-- --:--:--   341
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:42:42 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    266    280 --:--:-- --:--:-- --:--:--   548
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:43:13 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    203    253 --:--:-- --:--:-- --:--:--   456100   173  100    77  100    96    203    253 --:--:-- --:--:-- --:--:--   456
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:43:18 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    205    216 --:--:-- --:--:-- --:--:--   422
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:43:49 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    262    327 --:--:-- --:--:-- --:--:--   590100   173  100    77  100    96    261    326 --:--:-- --:--:-- --:--:--   588
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:43:54 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    186    195 --:--:-- --:--:-- --:--:--   382
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:44:25 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   473
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:44:30 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    167    176 --:--:-- --:--:-- --:--:--   344
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:45:01 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    213    266 --:--:-- --:--:-- --:--:--   480
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:45:06 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    217    228 --:--:-- --:--:-- --:--:--   447
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}invalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+./daemon.sh: line 19: free: command not found
+uptime: illegal option -- p
+usage: uptime
+2025-05-30 04:45:06 - 系统状态报告:
+- CPU使用率: %
+- 内存使用率: 
+- 磁盘使用率: 3%
+- 采集进程数:        0
+- 运行时长: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   230  100    43  100   187    203    884 --:--:-- --:--:-- --:--:--  1090
+{"code":9499,"msg":"Bad Request","data":{}}2025-05-30 04:45:37 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    199    248 --:--:-- --:--:-- --:--:--   447100   173  100    77  100    96    199    248 --:--:-- --:--:-- --:--:--   447
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:45:42 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    154    162 --:--:-- --:--:-- --:--:--   316
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:46:13 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    214    267 --:--:-- --:--:-- --:--:--   480100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   473
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:46:18 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    202    212 --:--:-- --:--:-- --:--:--   415
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:46:49 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    191    238 --:--:-- --:--:-- --:--:--   430100   173  100    77  100    96    191    238 --:--:-- --:--:-- --:--:--   430
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:46:54 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    260    274 --:--:-- --:--:-- --:--:--   535
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:47:24 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    208    259 --:--:-- --:--:-- --:--:--   467
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:47:30 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    170    179 --:--:-- --:--:-- --:--:--   349
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:48:00 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    218    272 --:--:-- --:--:-- --:--:--   491
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:48:06 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    211    222 --:--:-- --:--:-- --:--:--   434100   158  100    77  100    81    211    222 --:--:-- --:--:-- --:--:--   432
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:48:36 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    214    267 --:--:-- --:--:-- --:--:--   483
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:48:42 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    220    231 --:--:-- --:--:-- --:--:--   451100   158  100    77  100    81    220    231 --:--:-- --:--:-- --:--:--   451
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:49:12 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    154    192 --:--:-- --:--:-- --:--:--   346
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:49:18 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    197    207 --:--:-- --:--:-- --:--:--   405100   158  100    77  100    81    197    207 --:--:-- --:--:-- --:--:--   405
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:49:48 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    188    234 --:--:-- --:--:-- --:--:--   424
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:49:53 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    120    127 --:--:-- --:--:-- --:--:--   248100   158  100    77  100    81    120    127 --:--:-- --:--:-- --:--:--   247
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:50:24 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    193    241 --:--:-- --:--:-- --:--:--   435
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:50:30 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    160    169 --:--:-- --:--:-- --:--:--   329100   158  100    77  100    81    160    169 --:--:-- --:--:-- --:--:--   329
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:51:00 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   475
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:51:06 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   425100   158  100    77  100    81    206    217 --:--:-- --:--:-- --:--:--   423
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:51:36 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    195    243 --:--:-- --:--:-- --:--:--   439
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:51:41 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    162    170 --:--:-- --:--:-- --:--:--   331100   158  100    77  100    81    161    170 --:--:-- --:--:-- --:--:--   331
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:52:12 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    283    353 --:--:-- --:--:-- --:--:--   638
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:52:17 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    188    198 --:--:-- --:--:-- --:--:--   388
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:52:48 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    231    288 --:--:-- --:--:-- --:--:--   519100   173  100    77  100    96    231    288 --:--:-- --:--:-- --:--:--   517
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:52:53 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    226    238 --:--:-- --:--:-- --:--:--   466
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:53:24 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    188    235 --:--:-- --:--:-- --:--:--   424100   173  100    77  100    96    188    234 --:--:-- --:--:-- --:--:--   422
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:53:29 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    208    218 --:--:-- --:--:-- --:--:--   428
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:54:00 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    173    216 --:--:-- --:--:-- --:--:--   389100   173  100    77  100    96    173    216 --:--:-- --:--:-- --:--:--   388
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:54:05 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    229    240 --:--:-- --:--:-- --:--:--   470
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:54:35 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    208    259 --:--:-- --:--:-- --:--:--   468
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:54:41 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    191    201 --:--:-- --:--:-- --:--:--   393
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:55:11 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   475
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:55:17 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    244    256 --:--:-- --:--:-- --:--:--   500100   158  100    77  100    81    241    254 --:--:-- --:--:-- --:--:--   495
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:55:47 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    222    277 --:--:-- --:--:-- --:--:--   501
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:55:53 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    198    208 --:--:-- --:--:-- --:--:--   407
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:56:23 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    156    195 --:--:-- --:--:-- --:--:--   353
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:56:29 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    151    159 --:--:-- --:--:-- --:--:--   309100   158  100    77  100    81    151    158 --:--:-- --:--:-- --:--:--   309
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:56:59 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    195    243 --:--:-- --:--:-- --:--:--   440
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:57:05 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   425100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   425
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}invalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+./daemon.sh: line 19: free: command not found
+uptime: illegal option -- p
+usage: uptime
+2025-05-30 04:57:05 - 系统状态报告:
+- CPU使用率: %
+- 内存使用率: 
+- 磁盘使用率: 3%
+- 采集进程数:        0
+- 运行时长: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   230  100    43  100   187    254   1105 --:--:-- --:--:-- --:--:--  1360
+{"code":9499,"msg":"Bad Request","data":{}}2025-05-30 04:57:35 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    196    245 --:--:-- --:--:-- --:--:--   442
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:57:41 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    250    263 --:--:-- --:--:-- --:--:--   512100   158  100    77  100    81    250    263 --:--:-- --:--:-- --:--:--   512
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:58:11 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    181    226 --:--:-- --:--:-- --:--:--   408
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:58:17 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    196    206 --:--:-- --:--:-- --:--:--   404
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:58:47 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    210    262 --:--:-- --:--:-- --:--:--   472
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:58:52 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    192    202 --:--:-- --:--:-- --:--:--   395
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:59:23 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    199    249 --:--:-- --:--:-- --:--:--   448
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 04:59:28 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    195    205 --:--:-- --:--:-- --:--:--   402
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 04:59:59 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    209    261 --:--:-- --:--:-- --:--:--   471100   173  100    77  100    96    209    261 --:--:-- --:--:-- --:--:--   471
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:00:04 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    114    120 --:--:-- --:--:-- --:--:--   236
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:00:35 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    192    239 --:--:-- --:--:-- --:--:--   432
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:00:40 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    207    218 --:--:-- --:--:-- --:--:--   427
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:01:11 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    96    0     0  100    96      0    703 --:--:-- --:--:-- --:--:--   700100   173  100    77  100    96    208    259 --:--:-- --:--:-- --:--:--   467
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:01:16 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    258    271 --:--:-- --:--:-- --:--:--   530
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:01:47 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    241    301 --:--:-- --:--:-- --:--:--   544
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:01:52 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    189    199 --:--:-- --:--:-- --:--:--   390
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:02:22 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    154    193 --:--:-- --:--:-- --:--:--   348100   173  100    77  100    96    154    192 --:--:-- --:--:-- --:--:--   347
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:02:28 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    195    205 --:--:-- --:--:-- --:--:--   402
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:02:58 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    145    181 --:--:-- --:--:-- --:--:--   326100   173  100    77  100    96    145    181 --:--:-- --:--:-- --:--:--   326
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:03:04 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    206    217 --:--:-- --:--:-- --:--:--   424
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}2025-05-30 05:03:34 - 程序未运行，正在重启...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   173  100    77  100    96    159    199 --:--:-- --:--:-- --:--:--   358100   173  100    77  100    96    159    198 --:--:-- --:--:-- --:--:--   358
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}./daemon.sh: line 40: cd: /opt/coingecko: No such file or directory
+./daemon.sh: line 41: /opt/coingecko/venv/bin/activate: No such file or directory
+./daemon.sh: line 42: /opt/coingecko/coingecko_collector.log: No such file or directory
+2025-05-30 05:03:40 - 程序重启失败
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   158  100    77  100    81    138    145 --:--:-- --:--:-- --:--:--   283
+{"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}

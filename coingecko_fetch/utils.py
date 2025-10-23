@@ -1,12 +1,11 @@
-# utils.py
 import os
 import time
 import json
 import requests
 import logging
-from datetime import datetime
-from typing import Dict, Any
 from datetime import datetime, timezone
+from typing import Dict, Any
+
 # 从配置模块导入常量
 from config import UTC_8, WEBHOOK_URL
 
@@ -15,8 +14,9 @@ def get_current_time() -> datetime:
     """获取当前UTC+8时间"""
     return datetime.now(UTC_8)
 
+
 def datetime_to_ms_timestamp(dt: datetime) -> int:
-    """将 datetime 转换为毫秒级时间戳 (UTC)"""
+    """将 datetime 转换为毫秒级时间戳（UTC）"""
     # 确保 datetime 是时区感知的，如果不是，则假定为 UTC
     # 这一步对于从 API 解析的含 'Z' (UTC) 的时间字符串是关键的。
     if dt.tzinfo is None or dt.tzinfo.utcoffset(dt) is None:
@@ -25,6 +25,7 @@ def datetime_to_ms_timestamp(dt: datetime) -> int:
 
 
 def align_time_to_3min(ms_timestamp: int) -> int:
+    """将毫秒时间戳对齐到3分钟间隔"""
     # / 1000 转换为秒，tz=timezone.utc 确保它是时区感知的 UTC 时间
     dt_utc = datetime.fromtimestamp(ms_timestamp / 1000, tz=timezone.utc)
 

@@ -5,16 +5,19 @@
 ## 功能特点
 
 - 每3分钟自动采集所有币种的市场数据
-- 数据时间自动对齐到3分钟间隔
-- 使用 TimescaleDB 存储时间序列数据
+- 数据时间自动对齐到3分钟间隔（使用毫秒时间戳）
+- 使用 TimescaleDB 存储时间序列数据（超表优化）
 - 完整的错误处理和日志记录
 - 支持环境变量配置
+- 智能 TimescaleDB 版本兼容性处理
+- 自动回退到标准 PostgreSQL 表（如果 TimescaleDB 不可用）
 
 ## 环境要求
 
 - Python 3.8+
-- TimescaleDB
+- PostgreSQL 14+ with TimescaleDB 2.17.2+
 - CoinGecko Pro API 密钥
+- Linux 系统（推荐 Ubuntu 22.04+）
 
 ## 安装步骤
 
@@ -35,26 +38,47 @@ cp .env.example .env
 ```
 然后编辑 `.env` 文件，填入你的配置信息：
 ```
-DB_NAME=timedb
+DB_NAME=test
 DB_USER=postgres
-DB_PASSWORD=your_password
+DB_PASSWORD=2450512223
 DB_HOST=localhost
 DB_PORT=5432
 COINGECKO_API_KEY=your_api_key
 ```
 
-4. 确保 TimescaleDB 已经创建了必要的表（参考 requirements.md 中的表结构）
+4. 初始化数据库：
+```bash
+python init_timescaledb.py
+```
+这将自动创建 TimescaleDB 扩展、表和索引。
 
 ## 运行脚本
 
 ```bash
-python coingecko_collector.py
+python main.py
 ```
 
 脚本会自动：
 - 立即执行一次数据采集
 - 设置定时任务，每3分钟执行一次
 - 将日志输出到控制台和 `coingecko_collector.log` 文件
+
+## 项目结构
+
+```
+coingecko_fetch/
+├── main.py                 # 主程序入口
+├── config.py              # 配置管理
+├── data_fetcher.py        # 数据获取模块
+├── database.py            # 数据库操作模块
+├── utils.py               # 工具函数
+├── init_timescaledb.py    # 数据库初始化脚本
+├── check_environment.py   # 环境检查脚本
+├── requirements.txt       # Python 依赖
+├── requirements.md        # 详细需求文档
+├── TIMESCALEDB_TROUBLESHOOTING.md  # TimescaleDB 故障排除
+└── 更新日志.md            # 更新日志
+```
 
 ## 日志查看
 
@@ -72,17 +96,33 @@ python coingecko_collector.py
 
 查询最新数据：
 ```sql
+-- 查询过去1小时的最新数据
 SELECT 
-    time,
+    to_timestamp(time/1000) as time,
     coin_id,
     current_price,
     market_cap_rank
 FROM coin_data
-WHERE time >= NOW() - INTERVAL '1 hour'
+WHERE time >= (EXTRACT(EPOCH FROM NOW()) * 1000)::BIGINT - 3600000
 ORDER BY market_cap_rank NULLS LAST
 LIMIT 10;
+
+-- 使用预定义视图查询最新价格
+SELECT * FROM latest_prices LIMIT 10;
+
+-- 查询24小时价格变化
+SELECT * FROM price_changes_24h LIMIT 10;
 ```
 
-ToDo：
+## 故障排除
 
-​     分布式爬虫提升速度
+如果遇到 TimescaleDB 相关错误，请参考：
+- `TIMESCALEDB_TROUBLESHOOTING.md` - 详细的故障排除指南
+- 运行 `python check_environment.py` 检查环境配置
+
+## 开发计划
+
+- [ ] 分布式爬虫提升速度
+- [ ] 数据压缩优化
+- [ ] 实时数据流处理
+- [ ] Web 管理界面

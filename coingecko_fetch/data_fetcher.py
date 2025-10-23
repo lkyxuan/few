@@ -101,7 +101,8 @@ def fetch_coin_data(page: int, retries: int = 0) -> Optional[List[Dict[Any, Any]
     return fetch_coin_data(page, retries + 1)
 
 
-# data = fetch_coin_data(1)  # 测试调用，实际使用时可移除
+# 测试代码（实际使用时移除）
+# data = fetch_coin_data(1)
 # print(data)
 
 
@@ -134,12 +135,13 @@ def verify_batch_data(data: List[Dict[Any, Any]], expected_range: Tuple[int, int
                 f"检测到市值低于 ${MIN_MARKET_CAP_THRESHOLD:,.0f} 的币种 (最小: ${min_market_cap:,.2f})，本轮采集完成")
             return True, True  # 数据有效，但应停止
 
+    # 排名验证逻辑（已注释，可根据需要启用）
     # min_rank, max_rank = min(ranks), max(ranks)
     # expected_min = expected_range[0]
     # expected_max = expected_range[1]
     # rank_tolerance = 50  # 允许排名有 50 的浮动范围
     #
-    # # 检查排名是否在预期范围内 (允许浮动)
+    # # 检查排名是否在预期范围内（允许浮动）
     # if not (expected_min - rank_tolerance <= min_rank <= expected_min + rank_tolerance):
     #     logging.warning(
     #         f"市值排名范围与预期有偏差: 实际最小Rank {min_rank}, 预期 {expected_min} (容差 {rank_tolerance})"

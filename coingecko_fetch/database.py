@@ -10,11 +10,7 @@ from typing import List, Dict, Any, Set
 # 从配置模块导入常量
 from config import DB_CONFIG, DB_CONNECT_RETRIES, COINS_PER_PAGE
 # 从工具模块导入函数和常量
-# 假设 align_time_to_3min 现在接收并返回毫秒级时间戳 (int)
 from utils import align_time_to_3min, datetime_to_ms_timestamp
-
-
-# 辅助函数：将 datetime 对象转换为毫秒级时间戳
 
 
 @contextmanager
@@ -47,7 +43,7 @@ def get_db_connection():
 
 
 def verify_database_save(conn, aligned_ms_timestamp: int, expected_coins: Set[str]) -> bool:
-    """验证数据是否正确保存到数据库 (使用毫秒时间戳)"""
+    """验证数据是否正确保存到数据库（使用毫秒时间戳）"""
     if not expected_coins:
         logging.warning("没有需要验证的币种 (expected_coins 为空)")
         return True
@@ -83,7 +79,7 @@ def verify_database_save(conn, aligned_ms_timestamp: int, expected_coins: Set[st
 
 
 def save_to_database(data: List[Dict[Any, Any]], conn, current_time: datetime) -> bool:
-    """保存数据到数据库，返回是否成功 (使用毫秒时间戳)"""
+    """保存数据到数据库，返回是否成功（使用毫秒时间戳）"""
     if not data:
         logging.warning("没有数据需要保存 (data为空)")
         return False

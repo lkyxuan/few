@@ -5,9 +5,8 @@ import logging
 import schedule
 from typing import Dict, Any
 
-# 导入配置 (确保在日志配置前导入DB_CONFIG以供日志使用)
+# 导入配置
 from config import DB_CONFIG, COINS_PER_PAGE, MAX_RETRIES
-
 # 导入模块
 from utils import get_current_time, report_status
 from database import get_db_connection, save_to_database
@@ -85,7 +84,7 @@ def collect_all_data():
                 # 验证批次数据
                 is_valid, should_stop = verify_batch_data(data, (start_rank, end_rank))
 
-                print(is_valid, should_stop)
+                logging.debug(f"数据验证结果: is_valid={is_valid}, should_stop={should_stop}")
                 if not is_valid:
                     logging.error(f"第 {page} 页数据验证失败，跳过此页")
                     status['failed_pages'] += 1
@@ -165,7 +164,7 @@ def main():
         schedule.every().hour.at(f":{minute:02d}").do(collect_all_data)
         logging.info(f"设置定时任务: 每小时{minute:02d}分执行")
 
-    # 立即执行一次以供测试 (可选)
+    # 立即执行一次以供测试（可选）
     # logging.info("启动后立即执行一次采集任务...")
     # collect_all_data()
 
@@ -184,5 +183,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # collect_all_data()
+    # collect_all_data()  # 测试时取消注释
     main()

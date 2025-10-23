@@ -56,7 +56,42 @@ def init_timescaledb():
         with conn.cursor() as cur:
             # 启用TimescaleDB扩展
             logging.info("正在启用 TimescaleDB 扩展...")
-            cur.execute("CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;")
+            timescaledb_available = False
+            try:
+                # 尝试创建最新版本的扩展
+                cur.execute("CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;")
+                timescaledb_available = True
+                logging.info("TimescaleDB 扩展已启用")
+            except Exception as e:
+                # 如果最新版本失败，尝试使用已安装的版本
+                error_msg = str(e)
+                if "no installation script nor update path" in error_msg:
+                    logging.warning(f"TimescaleDB 最新版本不可用，尝试使用已安装的版本...")
+                    try:
+                        # 尝试使用已安装的版本（2.17.2）
+                        # 如果这个版本失败，回退到标准表
+                        installed_versions = ['2.17.2', '2.19.3', '2.16.1', '2.15.3', '2.14.2']
+                        for version in installed_versions:
+                            try:
+                                logging.info(f"尝试使用 TimescaleDB 版本: {version}")
+                                cur.execute(f"CREATE EXTENSION IF NOT EXISTS timescaledb VERSION '{version}' CASCADE;")
+                                timescaledb_available = True
+                                logging.info(f"TimescaleDB 扩展已启用 (版本: {version})")
+                                break
+                            except Exception as version_error:
+                                logging.debug(f"版本 {version} 不可用: {version_error}")
+                                continue
+                        
+                        if not timescaledb_available:
+                            raise Exception("未找到可用的 TimescaleDB 版本")
+                    except Exception as e2:
+                        logging.warning(f"无法创建 TimescaleDB 扩展，将使用标准 PostgreSQL 表: {e2}")
+                        logging.warning("提示：TimescaleDB 可以提供更好的时间序列数据性能")
+                        timescaledb_available = False
+                else:
+                    logging.warning(f"无法创建 TimescaleDB 扩展，将使用标准 PostgreSQL 表: {e}")
+                    logging.warning("提示：TimescaleDB 可以提供更好的时间序列数据性能")
+                    timescaledb_available = False
 
             # 创建主数据表，时间列使用BIGINT类型存储毫秒时间戳
             logging.info("正在创建 'coin_data' 表...")
@@ -81,14 +116,21 @@ def init_timescaledb():
                 );
             """)
 
-            # 将表转换为超表 (hypertable)
-            logging.info("正在将 'coin_data' 转换为超表...")
-            cur.execute("""
-                SELECT create_hypertable('coin_data', 'time',
-                    if_not_exists => TRUE,
-                    migrate_data => TRUE
-                );
-            """)
+            # 将表转换为超表 (hypertable) - 仅在 TimescaleDB 可用时执行
+            if timescaledb_available:
+                logging.info("正在将 'coin_data' 转换为超表...")
+                try:
+                    cur.execute("""
+                        SELECT create_hypertable('coin_data', 'time',
+                            if_not_exists => TRUE,
+                            migrate_data => TRUE
+                        );
+                    """)
+                    logging.info("超表创建成功")
+                except psycopg2.OperationalError as e:
+                    logging.warning(f"无法创建超表，将使用标准表: {e}")
+            else:
+                logging.info("跳过超表创建（TimescaleDB 不可用）")
 
             # 创建索引以提高查询性能
             logging.info("正在创建索引...")

@@ -1,0 +1,44 @@
+[Unit]
+Description=DataBao Monitor Service - Centralized monitoring and alerting service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=databao
+Group=databao
+WorkingDirectory=/databao/monitor
+Environment=PYTHONPATH=/databao/monitor/src
+Environment=PYTHONUNBUFFERED=1
+
+# 主要执行命令
+ExecStart=/usr/bin/python3 /databao/monitor/src/main.py
+
+# 重启策略
+Restart=always
+RestartSec=10
+StartLimitInterval=60
+StartLimitBurst=3
+
+# 日志配置
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=databao-monitor
+
+# 安全配置
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/databao/monitor /var/log/databao
+
+# 资源限制
+MemoryMax=512M
+CPUQuota=50%
+
+# 健康检查
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

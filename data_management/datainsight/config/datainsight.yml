@@ -1,0 +1,418 @@
+# DataInsight Configuration
+# 加密货币指标计算引擎主配置文件
+# 基于 docs/datainsight/datainsight.md 的设计
+
+# =============================================================================
+# 数据库连接配置 (复用DataSync配置，独立连接池)
+# =============================================================================
+database:
+  local:
+    host: localhost
+    port: 5432
+    name: cryptodb
+    user: postgres       # 复用DataSync环境变量
+    password: 2450512223  # 复用DataSync环境变量
+    pool_size: 50                  # 增加连接池大小，支持高并发计算
+    min_pool_size: 5               # 最小连接数
+    timeout: 30                    # 连接超时30秒
+    command_timeout: 45            # SQL执行超时45秒 (减少等待时间)
+    max_inactive_connection_lifetime: 1800  # 30分钟后回收不活跃连接
+    connection_retry_attempts: 3   # 连接重试次数
+    connection_retry_delay: 1      # 连接重试间隔(秒)
+
+# =============================================================================
+# 指标计算配置
+# =============================================================================
+calculation:
+  batch_size: 1000              # 批量计算大小
+  concurrent_workers: 2         # 并发工作进程 (轻量负载)
+  single_indicator_timeout: 60  # 单个指标计算超时时间(秒)
+  cache_enabled: true           # 启用计算缓存
+  cache_ttl: 1800              # 缓存过期时间(秒) - 30分钟
+
+# =============================================================================
+# 任务调度配置
+# =============================================================================
+scheduler:
+  enabled: true
+  execution_mode: "database_notify"   # 数据库通知机制
+  data_lag: 1                        # 处理上一个时间点的数据（延迟1个周期）
+  batch_schedule: "0 1 * * *"        # 每日1点批量计算
+    
+  # 数据完整性检查配置
+  integrity_check:
+    enabled: true                     # 启用启动时数据完整性检查
+    max_gap_hours: 3                  # 最大允许数据间隔（小时），超过则告警
+    auto_backfill: true               # 自动补算缺失数据
+    backfill_batch_size: 100          # 补算批次大小
+    backfill_parallel: 2              # 补算并发数
+    alert_on_large_gaps: true         # 大数据缺口时立即告警
+
+# =============================================================================
+# 错误处理和重试配置
+# =============================================================================
+error_handling:
+  retry_max: 2                       # 每个指标最多重试2次
+  retry_backoff: "exponential"       # 指数退避策略
+  retry_base_delay: 1                # 基础延迟时间(秒)
+  retry_max_delay: 4                 # 最大延迟时间(秒)
+  
+  # 依赖处理策略
+  dependency_failure_action: "skip_with_warning"  # 依赖失败时跳过并警告
+  critical_failure_threshold: 3      # 连续失败3次发送critical告警
+  database_failure_action: "abort_batch"  # 数据库失败时中止整批
+  
+  # 告警配置
+  alert_on_failure: true             # 失败时发送告警
+  alert_on_critical: true            # critical级别立即告警
+  alert_cooldown: 300                # 告警冷却时间(秒) - 5分钟
+
+# =============================================================================
+# 指标配置 - 连续优先级执行 (第一批指标)
+# =============================================================================
+indicators:
+  # 连续优先级配置 (第一批指标：16个指标)
+  # 格式: "优先级数字": "指标名称" (从1开始连续)
+  priorities:
+    "1": "PRICE_CHANGE_3M"
+    "2": "PRICE_CHANGE_6M"
+    "3": "PRICE_CHANGE_12M"
+    "4": "PRICE_CHANGE_24H"
+    "5": "VOLUME_CHANGE_3M"
+    "6": "VOLUME_CHANGE_6M"
+    "7": "VOLUME_CHANGE_9M"
+    "8": "VOLUME_CHANGE_1H"
+    "9": "VOLUME_CHANGE_3H"
+    "10": "VOLUME_CHANGE_8H"
+    "11": "VOLUME_CHANGE_24H"
+    "12": "AVG_BTC_ETH"
+    "13": "AVG_BTC_ETH_SOL"
+    "14": "WEIGHTED_AVG_BTC_ETH"
+    "15": "WEIGHTED_AVG_BTC_ETH_SOL"
+    "16": "WEIGHTED_AVG_SOL_ETH_BNB"
+    "17": "CAPITAL_INFLOW_INTENSITY_3M"
+  
+  # =============================================================================
+  # 技术指标配置 - 价格涨幅指标 (优先级1-4)
+  # =============================================================================
+  technical:
+    PRICE_CHANGE_3M:
+      timeframes: ["3M"]              # 存储标识：3分钟价格涨幅
+      calculation_type: "price_change_percent"
+      lookback_minutes: 3             # 计算周期：对比3分钟前价格
+      applies_to: "all_coins"
+      formula: "((current_price - old_price) / old_price) * 100"
+      source_table: "coin_data"
+      target_coins: []                # 空数组表示所有币种
+      
+    PRICE_CHANGE_6M:
+      timeframes: ["6M"]              # 存储标识：6分钟价格涨幅
+      calculation_type: "price_change_percent"
+      lookback_minutes: 6             # 计算周期：对比6分钟前价格
+      applies_to: "all_coins"
+      formula: "((current_price - old_price) / old_price) * 100"
+      source_table: "coin_data"
+      target_coins: []
+      
+    PRICE_CHANGE_12M:
+      timeframes: ["12M"]             # 存储标识：12分钟价格涨幅
+      calculation_type: "price_change_percent"
+      lookback_minutes: 12            # 计算周期：对比12分钟前价格
+      applies_to: "all_coins"
+      formula: "((current_price - old_price) / old_price) * 100"
+      source_table: "coin_data"
+      target_coins: []
+      
+    PRICE_CHANGE_24H:
+      timeframes: ["24H"]             # 存储标识：24小时价格涨幅
+      calculation_type: "price_change_percent"
+      lookback_minutes: 1440          # 计算周期：对比24小时前价格
+      applies_to: "all_coins"
+      formula: "((current_price - old_price) / old_price) * 100"
+      source_table: "coin_data"
+      target_coins: []
+      
+    # =============================================================================
+    # 交易量变化指标配置 (优先级5-11)
+    # =============================================================================
+    VOLUME_CHANGE_3M:
+      timeframes: ["3M"]              # 存储标识：3分钟交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 3             # 计算周期：对比3分钟前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_6M:
+      timeframes: ["6M"]              # 存储标识：6分钟交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 6             # 计算周期：对比6分钟前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_9M:
+      timeframes: ["9M"]              # 存储标识：9分钟交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 9             # 计算周期：对比9分钟前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_1H:
+      timeframes: ["1H"]              # 存储标识：1小时交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 60            # 计算周期：对比1小时前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_3H:
+      timeframes: ["3H"]              # 存储标识：3小时交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 180           # 计算周期：对比3小时前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_8H:
+      timeframes: ["8H"]              # 存储标识：8小时交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 480           # 计算周期：对比8小时前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+      
+    VOLUME_CHANGE_24H:
+      timeframes: ["24H"]             # 存储标识：24小时交易量变化
+      calculation_type: "volume_change_percent"
+      lookback_minutes: 1440          # 计算周期：对比24小时前24小时交易量
+      applies_to: "all_coins"
+      formula: "((current_volume_24h - old_volume_24h) / old_volume_24h) * 100"
+      source_table: "coin_data"
+      volume_field: "volume_24h"
+      target_coins: []
+
+  # =============================================================================
+  # 市场聚合指标配置 - 聚合指标 (优先级12-16)
+  # =============================================================================
+  market:
+    AVG_BTC_ETH:
+      timeframes: ["24H"]             # 存储标识：24小时聚合平均涨幅
+      calculation_type: "simple_average"
+      base_indicator: "PRICE_CHANGE_24H"  # 依赖基础指标
+      coin_list: ["bitcoin", "ethereum"]
+      applies_to: "global"            # 只生成一条全局记录
+      formula: "(change_btc + change_eth) / 2"
+      target_coin_id: "GLOBAL"        # 存储时的coin_id
+      dependencies: ["PRICE_CHANGE_24H"]  # 明确依赖关系
+      
+    AVG_BTC_ETH_SOL:
+      timeframes: ["24H"]             # 存储标识：24小时聚合指标
+      calculation_type: "simple_average"
+      base_indicator: "PRICE_CHANGE_24H"
+      coin_list: ["bitcoin", "ethereum", "solana"]
+      applies_to: "global"
+      formula: "(change_btc + change_eth + change_sol) / 3"
+      target_coin_id: "GLOBAL"
+      dependencies: ["PRICE_CHANGE_24H"]
+      
+    WEIGHTED_AVG_BTC_ETH:
+      timeframes: ["24H"]             # 存储标识：24小时聚合指标
+      calculation_type: "market_cap_weighted_average"
+      base_indicator: "PRICE_CHANGE_24H"
+      coin_list: ["bitcoin", "ethereum"]
+      weight_field: "market_cap"      # 权重字段
+      applies_to: "global"
+      formula: "Σ(change_i × market_cap_i) / Σ(market_cap_i)"
+      target_coin_id: "GLOBAL"
+      dependencies: ["PRICE_CHANGE_24H"]
+      
+    WEIGHTED_AVG_BTC_ETH_SOL:
+      timeframes: ["24H"]             # 存储标识：24小时聚合指标
+      calculation_type: "market_cap_weighted_average"
+      base_indicator: "PRICE_CHANGE_24H"
+      coin_list: ["bitcoin", "ethereum", "solana"]
+      weight_field: "market_cap"
+      applies_to: "global"
+      formula: "Σ(change_i × market_cap_i) / Σ(market_cap_i)"
+      target_coin_id: "GLOBAL"
+      dependencies: ["PRICE_CHANGE_24H"]
+      
+    WEIGHTED_AVG_SOL_ETH_BNB:
+      timeframes: ["24H"]             # 存储标识：24小时聚合指标
+      calculation_type: "market_cap_weighted_average"
+      base_indicator: "PRICE_CHANGE_24H"
+      coin_list: ["solana", "ethereum", "binancecoin"]
+      weight_field: "market_cap"
+      applies_to: "global"
+      formula: "Σ(change_i × market_cap_i) / Σ(market_cap_i)"
+      target_coin_id: "GLOBAL"
+      dependencies: ["PRICE_CHANGE_24H"]
+
+    # =============================================================================
+    # 资金流入强度指标配置 (优先级17)
+    # =============================================================================
+    CAPITAL_INFLOW_INTENSITY_3M:
+      timeframes: ["3M"]              # 存储标识：3分钟资金流入强度
+      calculation_type: "capital_inflow_intensity"
+      base_volume_change: "VOLUME_CHANGE_3M"  # 基于3分钟交易量变化
+      applies_to: "all_coins"
+      formula: "(volume_change_3m_percent × volume_24h) ÷ market_cap"
+      source_table: "coin_data"
+      target_coins: []
+      dependencies: ["VOLUME_CHANGE_3M"]  # 依赖交易量变化指标
+
+# =============================================================================
+# 监控集成配置
+# =============================================================================
+monitoring:
+  enabled: true
+  service_name: "datainsight"
+  monitor_url: "http://localhost:9527"    # DataBao Monitor API地址
+  
+  # 事件发送配置
+  event_sender:
+    timeout: 5                           # HTTP请求超时
+    retry_count: 2                       # 重试次数
+    async_mode: true                     # 异步发送，不阻塞业务
+    
+  # 监控事件类型配置
+  events:
+    calculation_success:
+      event_type: "indicator_calculation_success"
+      level: "info"
+      silent: true                       # 静音通知
+      
+    calculation_failure:
+      event_type: "indicator_calculation_failure"
+      level: "error"
+      alert_users: ["@all"]              # 失败时@all
+      
+    integrity_check_success:
+      event_type: "integrity_check_success"
+      level: "info"
+      
+    integrity_check_failure:
+      event_type: "integrity_check_failure"
+      level: "error"
+      alert_users: ["@all"]
+      
+    backfill_progress:
+      event_type: "backfill_progress"
+      level: "info"
+      batch_interval: 10                 # 每10个批次报告一次进度
+      
+    critical_failure:
+      event_type: "critical_failure"
+      level: "critical"
+      alert_users: ["@all"]
+      immediate: true                    # 立即发送
+
+# =============================================================================
+# 日志配置
+# =============================================================================
+logging:
+  level: INFO
+  file: /var/log/databao/datainsight.log
+  rotate_days: 30
+  max_file_size: "50MB"
+  backup_count: 5
+  
+  # 分类日志配置
+  loggers:
+    scheduler: INFO                      # 调度器日志
+    indicators: INFO                     # 指标计算日志
+    database: WARNING                    # 数据库操作日志
+    monitoring: INFO                     # 监控客户端日志
+    triggers: INFO                       # 触发机制日志
+    
+  # 日志格式
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+# =============================================================================
+# 性能调优配置
+# =============================================================================
+performance:
+  # 数据库查询优化
+  db_query_timeout: 30                   # 查询超时时间
+  connection_pool_recycle: 3600          # 连接池回收时间(秒)
+  enable_query_cache: true               # 启用查询缓存
+  
+  # 内存管理 - 优化后配置 (系统总内存: 64GB)
+  max_memory_usage: "2GB"                # 最大内存使用 - 从1GB提升到2GB
+  gc_threshold: 10000                    # 垃圾回收阈值
+  
+  # 并发控制
+  max_concurrent_indicators: 4           # 最大并发指标数
+  queue_size: 100                        # 任务队列大小
+
+# =============================================================================
+# 滑动窗口缓存优化配置 - V2.0 激进优化架构
+# =============================================================================
+optimization:
+  # 内存计算引擎V2开关
+  memory_engine_enabled: true            # 启用滑动窗口缓存内存计算引擎V2
+  # 传统模式已移除，只使用V2内存引擎
+  
+  # 滑动窗口缓存配置 - 优化后配置 (系统总内存: 64GB)
+  sliding_window_cache:
+    enabled: true                        # 启用滑动窗口缓存
+    max_memory_mb: 256.0                 # 最大内存使用量(MB) - 从1MB提升到256MB
+    update_interval: 180                 # 缓存更新间隔(秒) - 3分钟
+    retention_hours: 25                  # 数据保留时间(小时) - 25小时窗口
+    preload_on_startup: true             # 启动时预加载数据
+    required_timepoints: [0, 3, 6, 9, 12, 60, 180, 480, 1440]  # 需要缓存的时间点(分钟)
+  
+  # 两阶段计算配置
+  two_phase_calculation:
+    enabled: true                        # 启用两阶段计算优化
+    base_indicators_priority: 11         # 基础指标最大优先级 (1-11)
+    aggregation_indicators_start: 12     # 聚合指标起始优先级 (12-16)
+    intermediate_save: true              # 中间结果保存（基础指标）
+  
+  # 性能监控和统计
+  performance_monitoring:
+    enabled: true                        # 启用性能监控
+    log_performance_stats: true          # 记录性能统计
+    track_cache_hit_rate: true           # 跟踪缓存命中率
+    log_memory_usage: true               # 记录内存使用情况
+    alert_on_memory_threshold: 0.8       # 内存使用超过80%时告警
+    compare_with_traditional: false      # 与传统模式对比（仅用于测试）
+  
+  # 遗留配置（兼容性）
+  legacy_params:
+    data_cache_ttl: 300                  # 遗留: 数据缓存存活时间(秒)
+    batch_size_limit: 10000              # 遗留: 单次批量操作限制
+    max_timepoints_cache: 20             # 遗留: 最大缓存时间点数
+
+# =============================================================================
+# 开发和调试配置
+# =============================================================================
+debug:
+  enabled: false                         # 生产环境关闭
+  dry_run: false                         # 干运行模式，不写入数据库
+  verbose_logging: false                 # 详细日志
+  profile_performance: false             # 性能分析
+  save_intermediate_results: false       # 保存中间计算结果
+  
+# =============================================================================
+# 环境配置
+# =============================================================================
+environment:
+  name: "production"                     # 环境名称
+  timezone: "UTC"                        # 时区配置
+  locale: "en_US.UTF-8"                 # 区域设置

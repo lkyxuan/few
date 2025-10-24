@@ -1,0 +1,123 @@
+# DataSync Configuration
+# 基于docs/datasync/datasync.md的设计
+
+database:
+  remote:
+    host: ${REMOTE_DB_HOST:-localhost}
+    port: ${REMOTE_DB_PORT:-5432}
+    name: ${REMOTE_DB_NAME:-cryptodb}
+    user: ${REMOTE_DB_USER:-postgres}
+    password: ${REMOTE_DB_PASSWORD:-2450512223}
+    ssl_mode: require
+    pool_size: 30
+    timeout: 60
+
+  local:
+    host: localhost
+    port: 5432
+    name: cryptodb
+    user: postgres
+    password: 2450512223
+    pool_size: 100
+
+sync:
+  interval: 3m
+  # 性能优化配置 - 2025-08-31更新
+  batch_size: 10000              # 批量查询大小（从1200提升到10000）
+  insert_batch_size: 1000        # 插入批次大小（保持1000条并发插入）
+  concurrent_workers: 10         # 并发worker数量（增加到10个）
+  retry_max: 3
+  retry_backoff: exponential
+
+# 智能轮询配置 - 绝对时间窗口策略
+smart_polling:
+  enabled: true                  # 启用智能轮询
+  polling_cycle_minutes: 3       # 轮询周期（分钟）- 基于API采集频率
+  polling_window_start: 5        # 轮询窗口开始时间（每周期的第N秒）
+  polling_window_end: 30         # 轮询窗口结束时间（每周期的第N秒）
+  polling_interval_seconds: 2    # 轮询窗口内的查询间隔（秒）
+  
+  # 时间窗口说明：
+  # - API每3分钟采集一次（0:00, 3:00, 6:00...）
+  # - 采集耗时约10秒，数据约在0:10, 3:10, 6:10到达
+  # - 轮询窗口：0:05-0:30, 3:05-3:30, 6:05-6:30...
+  # - 在窗口内每2秒轮询一次，发现数据立即同步并结束轮询
+  
+storage:
+  hot_data_path: /databao_hot    # 热数据: 最近6个月
+  warm_data_path: /databao_warm  # 温数据: 6个月-4年 
+  cold_data_path: /databao_cold  # 冷数据: 4年以上
+
+migration:
+  enabled: true
+  schedule: "0 2 * * 0"  # 每周日凌晨2点执行
+  hot_retention_days: 182    # 热数据保留6个月
+  warm_retention_days: 1460  # 温数据保留4年
+  batch_size: 10000         # 每批迁移记录数
+  parallel_jobs: 2          # 并行迁移任务数
+
+remote_cleanup:
+  enabled: true
+  retention_days: 60        # 远程数据保留2个月
+  trigger_after_sync: true  # 同步完成后自动触发清理
+  safety_check: true        # 清理前验证本地数据完整性
+  batch_size: 5000         # 每批清理记录数
+  max_delete_per_day: 100000  # 每天最大删除数量限制
+
+# DataInsight集成配置 - 使用PostgreSQL NOTIFY/LISTEN机制
+datainsight_integration:
+  enabled: true                           # 启用DataInsight通知
+  notification_channel: "datainsight_wakeup"  # PostgreSQL通知频道名称
+  notification_payload: "sync_done"      # 通知载荷内容
+
+# Monitor集成配置 - HTTP事件通知
+monitoring:
+  enabled: true                           # 启用监控通知
+  service_name: "datasync"               # 服务名称
+  monitor_url: "http://localhost:9527"   # Monitor服务地址
+  
+  # 事件发送配置
+  event_sender:
+    timeout: 5                           # HTTP请求超时（秒）
+    retry_count: 2                       # 重试次数
+    async_mode: true                     # 异步发送，不阻塞同步流程
+    
+  # 监控事件类型配置
+  events:
+    sync_start:
+      event_type: "sync_start"
+      level: "info"
+      silent: false                      # 同步开始通知
+      
+    sync_progress:
+      event_type: "sync_progress"
+      level: "info" 
+      silent: true                       # 静默同步进度（避免过多通知）
+      batch_interval: 5                  # 每5个批次报告一次进度
+      
+    sync_success:
+      event_type: "sync_success"
+      level: "info"
+      silent: false                      # 同步成功通知
+      
+    sync_failure:
+      event_type: "sync_failure"
+      level: "error"
+      alert_users: ["@all"]              # 同步失败时@all
+      immediate: true                    # 立即发送
+      
+    cleanup_success:
+      event_type: "cleanup_success"
+      level: "info"
+      silent: true                       # 清理成功静默
+      
+    cleanup_failure:
+      event_type: "cleanup_failure"  
+      level: "error"
+      alert_users: ["@all"]              # 清理失败时@all
+  
+logging:
+  level: INFO
+  format: json
+  file: /var/log/databao/datasync.log
+  rotate_days: 30

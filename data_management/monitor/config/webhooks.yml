@@ -1,0 +1,72 @@
+routing_rules:
+  - name: "datasync_status"
+    conditions:
+      service: "datasync"
+      event_types: ["service_status"]
+      levels: ["info"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: true
+      at_users: []
+    enabled: true
+
+  - name: "datasync_sync_events"
+    conditions:
+      service: "datasync"
+      event_types: ["sync_start", "sync_progress", "sync_success"]
+      levels: ["info"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: true
+      at_users: []
+    enabled: true
+
+  - name: "datainsight_calculation_success"
+    conditions:
+      service: "datainsight"
+      event_types: ["indicator_calculation_success", "scheduler_startup"]
+      levels: ["info"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: false
+      at_users: []
+    enabled: true
+
+  - name: "datainsight_timepoint_completion"
+    conditions:
+      service: "datainsight"
+      event_types: ["timepoint_completion"]
+      levels: ["info"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: false
+      at_users: []
+    enabled: true
+
+  - name: "datainsight_failures"
+    conditions:
+      service: "datainsight"
+      event_types: ["integrity_check_failure", "indicator_calculation_failure", "scheduler_critical_failure"]
+      levels: ["error", "critical"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: false
+      at_users: ["@all"]
+    enabled: true
+
+  - name: "datainsight_shutdown"
+    conditions:
+      service: "datainsight"
+      event_types: ["scheduler_shutdown"]
+      levels: ["info"]
+    webhook:
+      type: "feishu"
+      url: "https://open.larksuite.com/open-apis/bot/v2/hook/dc63e98e-24fd-490f-89e4-039a169d7451"
+      silent: false
+      at_users: []
+    enabled: true

@@ -1,0 +1,25 @@
+# DataBao 监控服务配置文件
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 9527          # 使用小众端口避免冲突
+  workers: 4
+
+# 数据存储配置
+storage:
+  metrics_retention_hours: 168    # 7天
+  events_retention_days: 30       # 30天
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "/var/log/databao/monitor.log"
+  max_size: "100MB"
+  backup_count: 5
+
+# 性能配置
+performance:
+  max_concurrent_webhooks: 10
+  webhook_timeout_seconds: 10
+  event_queue_size: 1000

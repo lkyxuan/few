@@ -94,13 +94,34 @@ async def run_async_command(args, config, logger):
         finally:
             await db_manager.close()
             
+    elif args.command == 'config':
+        # 运行配置检查脚本
+        import subprocess
+        import sys
+        from pathlib import Path
+        
+        script_path = Path(__file__).parent.parent / 'scripts' / 'check_config.py'
+        if script_path.exists():
+            try:
+                result = subprocess.run([sys.executable, str(script_path)], 
+                                      capture_output=True, text=True, cwd=Path(__file__).parent.parent)
+                print(result.stdout)
+                if result.stderr:
+                    print("错误:", result.stderr)
+                sys.exit(result.returncode)
+            except Exception as e:
+                logger.error(f"配置检查失败: {e}")
+                sys.exit(1)
+        else:
+            logger.error("配置检查脚本不存在")
+            sys.exit(1)
 
 
 def main():
     """主程序入口"""
     parser = argparse.ArgumentParser(description='DataSync - 数据同步工具')
     parser.add_argument('command', choices=[
-        'sync', 'test', 'cleanup', 'migrate', 'status', 'health'
+        'sync', 'test', 'cleanup', 'migrate', 'status', 'health', 'config'
     ], help='要执行的命令')
     parser.add_argument('--config', '-c', default='config/datasync.yml',
                        help='配置文件路径')

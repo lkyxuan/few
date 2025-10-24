@@ -7,7 +7,7 @@ DataSync 同步管理器
 import asyncio
 import logging
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 from sqlalchemy import text, select, func
 from sqlalchemy.dialects.postgresql import insert
@@ -20,7 +20,6 @@ from database.connection import DatabaseManager
 from models import CoinData, SyncLog
 from logs.logger import DataSyncLogger
 from monitoring.monitor_client import get_monitor_client
-# 移除触发文件管理器，现在使用PostgreSQL NOTIFY
 
 
 class SyncManager:
@@ -304,7 +303,7 @@ class SyncManager:
     
     async def _sync_table_data(self, table_name: str, last_sync_time: Optional[datetime]) -> Tuple[int, Optional[datetime]]:
         """
-        同步表数据 - 修复版本，确保不遗漏数据
+        同步表数据 - 简化版本，确保数据完整性
         
         Args:
             table_name: 表名
@@ -315,96 +314,46 @@ class SyncManager:
         """
         total_synced = 0
         latest_time = None
-        
-        # 基于复合主键的分页同步，确保数据完整性
         current_time = last_sync_time if last_sync_time else datetime(1970, 1, 1)
-        current_coin_id = ""  # 用于处理相同时间戳的记录
         
-        self.logger.info(f"同步起始时间: {current_time}, 起始coin_id: {current_coin_id}")
+        self.logger.info(f"开始同步 {table_name}，起始时间: {current_time}")
         
-        batch_round = 0
         while True:
-            batch_round += 1
-            self.logger.info(f"开始第{batch_round}轮批量查询（批次大小: {self.batch_size:,}条）")
-            # 使用复合主键分页，确保不遗漏同一时间戳的数据
-            if current_coin_id:
-                # 处理相同时间戳的后续记录
-                query = f"""
-                SELECT * FROM {table_name} 
-                WHERE (time = :current_time AND coin_id > :current_coin_id)
-                   OR time > :current_time
-                ORDER BY time, coin_id
-                LIMIT :limit
-                """
-                params = {
-                    'current_time': current_time,
-                    'current_coin_id': current_coin_id,
-                    'limit': self.batch_size
-                }
-            else:
-                # 初始查询或新时间戳
-                query = f"""
-                SELECT * FROM {table_name} 
-                WHERE time >= :current_time
-                ORDER BY time, coin_id
-                LIMIT :limit
-                """
-                params = {
-                    'current_time': current_time,
-                    'limit': self.batch_size
-                }
+            # 查询一批数据
+            query = f"""
+            SELECT * FROM {table_name} 
+            WHERE time >= :current_time
+            ORDER BY time, coin_id
+            LIMIT :limit
+            """
             
-            # 从远程数据库查询
-            result = await self.db_manager.execute_remote(query, params)
+            result = await self.db_manager.execute_remote(query, {
+                'current_time': current_time,
+                'limit': self.batch_size
+            })
             rows = result.fetchall()
             
             if not rows:
                 break
             
-            # 分批并发插入到本地数据库 - 性能优化版
-            batch_synced = await self._insert_batch_data_concurrent(table_name, rows)
+            # 插入数据
+            batch_synced = await self._insert_batch_data(table_name, rows)
             total_synced += batch_synced
             
-            # 更新游标到最后一行
+            # 更新游标
             last_row = rows[-1]
-            last_row_time = last_row[0]  # time字段
-            last_row_coin_id = last_row[2]  # coin_id字段
+            latest_time = last_row[0]  # time字段
+            current_time = latest_time
             
-            latest_time = last_row_time  # 记录最新同步时间
-            
-            # 每完成一个批次同步后立即发送通知
+            # 发送通知
             if batch_synced > 0:
-                # 1. 发送数据库通知给DataInsight
                 await self._notify_datainsight_sync_done(table_name, batch_synced)
-                self.logger.info(f"✅ 已发送PostgreSQL通知给DataInsight: {table_name} 同步{batch_synced:,}条")
-                
-                # 2. 发送Monitor通知（批次级别）
-                batch_duration = time.time() - time.time()  # 可以更精确计算批次时间
-                # 使用实际的最新同步时间
                 await self.monitor.sync_progress(table_name, batch_synced, str(latest_time))
-                self.logger.info(f"📊 已发送Monitor进度通知: {table_name} 同步到 {latest_time}")
-                
-                # 也更新本地日志信息，显示时间而不只是记录数
-                self.logger.info(f"📊 批次完成: {batch_synced:,}条，最新时间: {latest_time}")
+                self.logger.info(f"批次完成: {batch_synced:,}条，最新时间: {latest_time}")
             
-            # 更新分页游标
-            if last_row_time == current_time:
-                # 相同时间戳，更新coin_id游标
-                current_coin_id = last_row_coin_id
-            else:
-                # 新时间戳，重置coin_id游标
-                current_time = last_row_time
-                current_coin_id = ""
-            
-            # 移除原来的3分钟进度通知，现在每批次都发送通知
-            
-            # 连续追赶逻辑：只有当返回记录数小于批次大小时才停止
-            # 这样可以在数据积压时连续同步，在追上进度时自动停止
+            # 如果返回记录数小于批次大小，说明已同步完所有数据
             if len(rows) < self.batch_size:
-                self.logger.info(f"本批次仅同步{len(rows)}条记录 < {self.batch_size}条，已追上进度，停止同步")
                 break
-            else:
-                self.logger.info(f"本批次同步满{len(rows)}条记录，可能还有更多数据，继续下一轮查询")
         
         return total_synced, latest_time
     
@@ -456,112 +405,6 @@ class SyncManager:
         
         return len(data_list)
     
-    async def _insert_batch_data_concurrent(self, table_name: str, rows: List[Any]) -> int:
-        """
-        并发批量插入数据 - 性能优化版
-        将大批量数据(10,000条)分成多个小批次(1,000条)并发插入
-        
-        Args:
-            table_name: 表名
-            rows: 数据行列表（通常10,000条）
-            
-        Returns:
-            插入的记录数
-        """
-        if not rows:
-            return 0
-            
-        total_rows = len(rows)
-        
-        # 将大批量数据分成小批次
-        batches = []
-        for i in range(0, total_rows, self.insert_batch_size):
-            batch = rows[i:i + self.insert_batch_size]
-            batches.append(batch)
-        
-        self.logger.info(f"开始并发插入{total_rows}条数据，分成{len(batches)}个批次，每批次{self.insert_batch_size}条")
-        
-        # 并发执行所有批次的插入任务
-        insert_tasks = []
-        for i, batch in enumerate(batches):
-            task = self._insert_single_batch(table_name, batch, i+1)
-            insert_tasks.append(task)
-        
-        # 等待所有插入任务完成
-        results = await asyncio.gather(*insert_tasks, return_exceptions=True)
-        
-        # 统计成功插入的记录数
-        total_inserted = 0
-        failed_batches = 0
-        
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                self.logger.error(f"批次{i+1}插入失败: {result}")
-                failed_batches += 1
-            else:
-                total_inserted += result
-        
-        if failed_batches > 0:
-            self.logger.warning(f"并发插入完成，成功插入{total_inserted}条，{failed_batches}个批次失败")
-        else:
-            self.logger.info(f"并发插入完成，成功插入{total_inserted}条，所有批次成功")
-        
-        return total_inserted
-    
-    async def _insert_single_batch(self, table_name: str, rows: List[Any], batch_number: int) -> int:
-        """
-        插入单个批次的数据
-        
-        Args:
-            table_name: 表名
-            rows: 数据行列表
-            batch_number: 批次编号（用于日志）
-            
-        Returns:
-            插入的记录数
-        """
-        if not rows:
-            return 0
-        
-        try:
-            # 将行转换为字典
-            data_list = []
-            for row in rows:
-                if hasattr(row, '_asdict'):
-                    data_list.append(row._asdict())
-                elif hasattr(row, '_mapping'):
-                    data_list.append(dict(row._mapping))
-                else:
-                    # 如果是tuple，需要配合column names
-                    data_list.append(dict(row))
-            
-            # 使用UPSERT语句处理重复数据
-            if table_name == 'coin_data':
-                insert_stmt = insert(CoinData.__table__).values(data_list)
-                upsert_stmt = insert_stmt.on_conflict_do_update(
-                    index_elements=['time', 'coin_id'],
-                    set_={
-                        'current_price': insert_stmt.excluded.current_price,
-                        'market_cap': insert_stmt.excluded.market_cap,
-                        'total_volume': insert_stmt.excluded.total_volume,
-                        'price_change_percentage_24h': insert_stmt.excluded.price_change_percentage_24h,
-                        'last_updated': insert_stmt.excluded.last_updated
-                    }
-                )
-            else:
-                raise ValueError(f"不支持的表名: {table_name}")
-            
-            # 执行插入
-            async with self.db_manager.get_local_session() as session:
-                await session.execute(upsert_stmt)
-                await session.commit()
-            
-            self.logger.debug(f"批次{batch_number}插入成功: {len(data_list)}条记录")
-            return len(data_list)
-            
-        except Exception as e:
-            self.logger.error(f"批次{batch_number}插入失败: {e}")
-            raise
     
     async def _load_last_sync_times(self):
         """加载上次同步时间 - 直接从数据表中获取最新时间"""

@@ -132,7 +132,7 @@ class ConfigManager:
     
     def get_cleanup_config(self) -> Dict[str, Any]:
         """获取远程清理配置"""
-        return self.get('remote_cleanup', {})
+        return self.get('cleanup', {})
     
     def get_logging_config(self) -> Dict[str, Any]:
         """获取日志配置"""

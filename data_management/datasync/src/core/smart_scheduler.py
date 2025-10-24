@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
 """
 DataSync 智能调度管理器
-基于绝对时间窗口的高效轮询机制
+简化的定时同步机制
 """
 
 import asyncio
 import logging
 import time
-from datetime import datetime, timezone, timedelta
-from typing import Dict, Any, Callable, Optional
+from datetime import datetime, timezone
+from typing import Dict, Any
 
 
 class SmartScheduler:
     """
-    智能调度管理器 - 绝对时间窗口轮询策略
+    智能调度管理器 - 简化版本
     
-    基于数据采集规律的智能轮询：
-    - 数据每3分钟采集一次（0:00, 3:00, 6:00...）
-    - 采集耗时约10秒，数据约在0:10, 3:10, 6:10到达
-    - 轮询窗口：每3分钟周期的第5-30秒（0:05-0:30, 3:05-3:30...）
-    - 窗口内高频轮询，发现数据立即同步并结束轮询
+    基于配置的定时同步：
+    - 按照配置的间隔时间定期检查新数据
+    - 发现新数据立即同步
     """
     
     def __init__(self, sync_manager, config_manager):
@@ -34,24 +32,15 @@ class SmartScheduler:
         self.config = config_manager
         self.logger = logging.getLogger('datasync.scheduler')
         
-        # 获取智能轮询配置
-        smart_polling_config = self.config.get('smart_polling', {})
-        
-        # 轮询窗口配置
-        self.cycle_minutes = smart_polling_config.get('polling_cycle_minutes', 3)  # 3分钟周期
-        self.window_start_seconds = smart_polling_config.get('polling_window_start', 5)  # 第5秒开始
-        self.window_end_seconds = smart_polling_config.get('polling_window_end', 30)  # 第30秒结束  
-        self.polling_interval = smart_polling_config.get('polling_interval_seconds', 2)  # 每2秒轮询一次
+        # 获取同步配置
+        sync_config = self.config.get('sync', {})
+        self.interval_minutes = sync_config.get('interval_minutes', 3)  # 默认3分钟
         
         # 状态管理
         self.is_running = False
-        self.current_cycle_data_found = False
         self.last_successful_sync_time = None
         
-        self.logger.info(f"智能调度器初始化完成")
-        self.logger.info(f"• 轮询周期: {self.cycle_minutes}分钟")
-        self.logger.info(f"• 轮询窗口: 第{self.window_start_seconds}-{self.window_end_seconds}秒") 
-        self.logger.info(f"• 轮询间隔: {self.polling_interval}秒")
+        self.logger.info(f"智能调度器初始化完成，同步间隔: {self.interval_minutes}分钟")
     
     async def start_smart_polling(self):
         """开始智能轮询"""
@@ -60,116 +49,27 @@ class SmartScheduler:
             return
         
         self.is_running = True
-        self.logger.info("🚀 启动智能轮询调度器")
+        self.logger.info("🚀 启动智能调度器")
         
         try:
             while self.is_running:
-                # 计算下一个轮询窗口
-                next_window_start = self._calculate_next_polling_window()
+                # 检查是否有新数据
+                has_new_data = await self._check_for_new_data()
                 
-                # 等待到轮询窗口开始
-                await self._wait_until(next_window_start)
+                if has_new_data:
+                    self.logger.info("✅ 发现新数据，开始同步")
+                    await self._execute_sync()
+                else:
+                    self.logger.debug("暂无新数据，等待下次检查")
                 
-                if not self.is_running:
-                    break
-                
-                # 执行轮询窗口
-                await self._execute_polling_window()
+                # 等待下次检查
+                await asyncio.sleep(self.interval_minutes * 60)
                 
         except Exception as e:
             self.logger.error(f"智能调度器运行异常: {e}")
         finally:
             self.is_running = False
             self.logger.info("智能调度器已停止")
-    
-    def _calculate_next_polling_window(self) -> datetime:
-        """
-        计算下一个轮询窗口的开始时间
-        
-        Returns:
-            下一个轮询窗口的开始时间
-        """
-        now = datetime.now(timezone.utc)
-        
-        # 计算当前所在的3分钟周期
-        minutes_since_hour = now.minute
-        current_cycle = (minutes_since_hour // self.cycle_minutes) * self.cycle_minutes
-        
-        # 计算当前周期的轮询窗口开始时间
-        current_window_start = now.replace(
-            minute=current_cycle,
-            second=self.window_start_seconds,
-            microsecond=0
-        )
-        
-        # 如果当前时间已经过了当前周期的轮询窗口，计算下一个周期
-        if now > current_window_start.replace(second=self.window_end_seconds):
-            next_cycle = (current_cycle + self.cycle_minutes) % 60
-            if next_cycle < current_cycle:  # 跨小时
-                current_window_start = current_window_start.replace(
-                    hour=(current_window_start.hour + 1) % 24,
-                    minute=next_cycle
-                )
-            else:
-                current_window_start = current_window_start.replace(minute=next_cycle)
-        elif now < current_window_start:
-            # 当前时间在轮询窗口开始之前，使用当前周期
-            pass
-        else:
-            # 当前时间在轮询窗口内，立即开始
-            return now
-        
-        return current_window_start
-    
-    async def _wait_until(self, target_time: datetime):
-        """等待到指定时间"""
-        now = datetime.now(timezone.utc)
-        wait_seconds = (target_time - now).total_seconds()
-        
-        if wait_seconds > 0:
-            self.logger.info(f"⏰ 等待轮询窗口开始: {target_time.strftime('%H:%M:%S')} "
-                           f"(还需等待 {wait_seconds:.1f}秒)")
-            await asyncio.sleep(wait_seconds)
-    
-    async def _execute_polling_window(self):
-        """执行轮询窗口"""
-        window_start = datetime.now(timezone.utc)
-        cycle_start_minute = (window_start.minute // self.cycle_minutes) * self.cycle_minutes
-        
-        self.logger.info(f"🔍 开始轮询窗口 [{cycle_start_minute:02d}:{self.window_start_seconds:02d}-"
-                        f"{cycle_start_minute:02d}:{self.window_end_seconds:02d}]")
-        
-        self.current_cycle_data_found = False
-        polling_count = 0
-        
-        # 计算轮询窗口结束时间
-        window_end = window_start.replace(second=self.window_end_seconds, microsecond=0)
-        if window_start.second > self.window_end_seconds:
-            window_end = window_end + timedelta(minutes=self.cycle_minutes)
-        
-        while datetime.now(timezone.utc) < window_end and self.is_running:
-            polling_count += 1
-            
-            # 检查是否有新数据
-            has_new_data = await self._check_for_new_data()
-            
-            if has_new_data:
-                self.logger.info(f"✅ 第{polling_count}次轮询发现新数据，立即开始同步")
-                
-                # 执行同步
-                await self._execute_sync()
-                
-                # 标记当前周期已找到数据，结束轮询窗口
-                self.current_cycle_data_found = True
-                break
-            
-            # 等待下次轮询
-            await asyncio.sleep(self.polling_interval)
-        
-        if not self.current_cycle_data_found:
-            elapsed_time = (datetime.now(timezone.utc) - window_start).total_seconds()
-            self.logger.info(f"🔍 轮询窗口结束，共轮询{polling_count}次，"
-                           f"耗时{elapsed_time:.1f}秒，未发现新数据")
     
     async def _check_for_new_data(self) -> bool:
         """
@@ -205,10 +105,10 @@ class SmartScheduler:
             sync_duration = time.time() - sync_start_time
             self.last_successful_sync_time = datetime.now(timezone.utc)
             
-            self.logger.info(f"✅ 智能轮询触发同步完成，耗时{sync_duration:.2f}秒")
+            self.logger.info(f"✅ 同步完成，耗时{sync_duration:.2f}秒")
             
         except Exception as e:
-            self.logger.error(f"智能轮询触发同步失败: {e}")
+            self.logger.error(f"同步失败: {e}")
     
     async def stop(self):
         """停止智能调度器"""
@@ -217,24 +117,13 @@ class SmartScheduler:
     
     def get_status(self) -> Dict[str, Any]:
         """获取调度器状态"""
-        now = datetime.now(timezone.utc)
-        next_window = self._calculate_next_polling_window()
-        
         return {
             'is_running': self.is_running,
-            'current_time': now.strftime('%H:%M:%S'),
-            'next_polling_window': next_window.strftime('%H:%M:%S'),
-            'seconds_until_next_window': (next_window - now).total_seconds(),
+            'interval_minutes': self.interval_minutes,
             'last_successful_sync': (
                 self.last_successful_sync_time.strftime('%H:%M:%S') 
                 if self.last_successful_sync_time else None
-            ),
-            'polling_config': {
-                'cycle_minutes': self.cycle_minutes,
-                'window_start_seconds': self.window_start_seconds,
-                'window_end_seconds': self.window_end_seconds,
-                'polling_interval': self.polling_interval
-            }
+            )
         }
 
 
